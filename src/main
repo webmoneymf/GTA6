@@ -1,0 +1,3 @@
+import { Game } from './game.js';
+const game = new Game();
+game.init().catch(err=>{console.error(err);document.getElementById('loading').innerHTML='<b>Не удалось загрузить игру</b><small>Откройте проект через локальный сервер и проверьте подключение к интернету.</small>';});
