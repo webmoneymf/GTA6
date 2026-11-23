@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JASON AND LUCIA</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div id="loading"><div class="load-logo">JASON <span>&</span> LUCIA</div><div class="load-line"><i></i></div><small>ЗАГРУЗКА ГОРОДА...</small></div>
+  <div id="menu" class="screen">
+    <div class="menu-bg"></div><div class="menu-content">
+      <div class="eyebrow">SUNSHINE STATE • 2026</div>
+      <h1>JASON <span>&</span><br>LUCIA</h1>
+      <p>Город принадлежит тем, кто осмеливается.</p>
+      <button id="startBtn" class="primary">НАЧАТЬ ИГРУ</button>
+      <button id="continueBtn" class="secondary">ПРОДОЛЖИТЬ</button>
+      <div class="menu-foot">ОДИНОЧНАЯ ИГРА <b>•</b> ОТКРЫТЫЙ ГОРОД</div>
+    </div>
+  </div>
+  <div id="hud" class="hidden">
+    <div class="hud-top">
+      <div class="brand">J<span>&</span>L <small>VICE COAST</small></div>
+      <div class="stats"><div><small>БАЛАНС</small><b id="money">$2,450</b></div><div><small>ПЕРСОНАЖ</small><b id="charName">JASON</b></div></div>
+    </div>
+    <div class="mission-card"><small>ТЕКУЩЕЕ ЗАДАНИЕ</small><b id="missionTitle">Первый день в городе</b><span id="missionText">Доберитесь до отмеченного места.</span></div>
+    <div class="hud-bottom">
+      <div class="health"><span>ЗДОРОВЬЕ</span><div><i id="healthBar"></i></div></div>
+      <div class="weapon"><small id="weaponName">ПИСТОЛЕТ</small><b id="ammo">12 / 48</b></div>
+      <div class="wanted" id="wanted">☆ ☆ ☆ ☆ ☆</div>
+    </div>
+    <div id="crosshair">+</div>
+    <div id="prompt"></div>
+    <div id="toast"></div>
+    <div id="mapPanel" class="hidden"><div class="map-title">VICE COAST <span>M — ЗАКРЫТЬ</span></div><canvas id="mapCanvas" width="320" height="320"></canvas><div class="map-legend">● ВЫ 　◆ ЦЕЛЬ　 ━ ДОРОГИ</div></div>
+    <div id="pause" class="hidden"><div class="pause-box"><h2>ПАУЗА</h2><button id="resumeBtn" class="primary">ПРОДОЛЖИТЬ</button><button id="saveBtn" class="secondary">СОХРАНИТЬ ИГРУ</button><button id="qualityBtn" class="secondary">ГРАФИКА: ВЫСОКАЯ</button><button id="weatherBtn" class="secondary">СМЕНИТЬ ПОГОДУ</button><button id="quitBtn" class="secondary">В ГЛАВНОЕ МЕНЮ</button><small>ESC — ВЕРНУТЬСЯ В ИГРУ</small></div></div>
+    <div class="controls-hint">WASD движение · SHIFT бег · E действие · F авто · TAB персонаж · M карта · ESC пауза</div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
